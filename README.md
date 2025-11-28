@@ -8,8 +8,6 @@ Um dashboard moderno e responsivo para monitoramento de sensores IoT em tempo re
 - **Organização por Tipo**: Os sensores são agrupados automaticamente pelo seu tipo
 - **Cards Visuais**: Cada sensor possui um card com ícone, valor e timestamp
 - **Design Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
-- **Temas de Cores**: Cores dinâmicas baseadas no tipo de sensor
-- **Animações Suaves**: Transições elegantes para melhor UX
 
 ## 📦 Tipos de Sensores Suportados
 
@@ -17,14 +15,8 @@ O dashboard reconhece automaticamente os seguintes tipos de sensores:
 
 - 🌡️ **Temperatura** (°C)
 - 💧 **Umidade** (%)
-- 🔷 **Pressão** (hPa)
 - 💡 **Luminosidade** (lux)
 - 📍 **Movimento**
-- ⚠️ **Gás**
-- 🌊 **Água**
-- 💨 **Ar**
-- 🔊 **Som**
-- 📏 **Distância** (cm)
 
 ## 🚀 Instalação
 
@@ -188,19 +180,4 @@ Se receber erro de CORS, certifique-se de que o backend está configurado para a
 
 ### Backend respondendo lentamente
 O dashboard atualiza a cada 5 segundos. Se quiser aumentar o intervalo, modifique em Dashboard.jsx
-
-## 📝 Licença
-
-Este projeto é parte do projeto IoT da comunidade.
-
-## 👨‍💻 Desenvolvimento
-
-Para contribuir com melhorias:
-
-1. Crie uma branch
-2. Faça seus commits
-3. Abra um Pull Request
-
 ---
-
-**Desenvolvido com ❤️ para monitoramento IoT**
