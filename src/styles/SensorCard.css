@@ -1,0 +1,39 @@
+.sensor-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sensor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-header h3 {
+  color: #667eea;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sensor-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.sensor-timestamp {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
