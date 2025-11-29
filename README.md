@@ -1,13 +1,16 @@
 # Dashboard IoT - Frontend React
 
-Um dashboard moderno e responsivo para monitoramento de sensores IoT em tempo real, construído com React e Vite.
+# Descrição Geral
+Dashboard moderno e responsivo para monitoramento de sensores IoT em tempo real, construído com React e Vite, consumindo dados de uma API externa. O sistema exibe valores de sensores organizados por tipo, atualizados automaticamente a cada intervalo configurável.
+
+![Dashboard](images/dashboard.jpeg)
 
 ## 🎨 Funcionalidades
 
-- **Dashboard em Tempo Real**: Atualiza automaticamente a cada 5 segundos
-- **Organização por Tipo**: Os sensores são agrupados automaticamente pelo seu tipo
-- **Cards Visuais**: Cada sensor possui um card com ícone, valor e timestamp
-- **Design Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
+- **Dashboard em tempo real** com atualização automática
+- Agrupamento automático por tipo de sensor
+- **Cards visuais** com ícone, valor e timestamp
+- Layout totalmente **responsivo**
 
 ## 📦 Tipos de Sensores Suportados
 
@@ -27,13 +30,12 @@ O dashboard reconhece automaticamente os seguintes tipos de sensores:
 
 ### Passos
 
-1. **Instale as dependências**:
+1. Instale as dependências:
 
 ```bash
 npm install
 ```
-
-2. **Configure o servidor backend**:
+2. Se necessário, ajustar endereço do backend no arquivo `vite.config.js.`
 
 O frontend espera que o backend rode em `http://localhost:8000`. Caso contrário, modifique o arquivo `vite.config.js`:
 
@@ -46,27 +48,20 @@ server: {
     }
   }
 }
-```
 
-3. **Inicie o servidor de desenvolvimento**:
+3. Executar ambiente de desenvolvimento:
 
 ```bash
 npm run dev
 ```
-
-O dashboard abrirá em `http://localhost:3000`
+O dashboard abrirá em `http://localhost:3000`.
 
 ## 🛠️ Comandos
 
 ```bash
-# Iniciar servidor de desenvolvimento
-npm run dev
-
-# Build para produção
-npm run build
-
-# Preview da build
-npm run preview
+npm run dev # Iniciar servidor de desenvolvimento
+npm run build # Build para produção
+npm run preview # Preview da build
 ```
 
 ## 📡 Estrutura de Dados
@@ -83,7 +78,7 @@ O frontend espera dados no seguinte formato da API:
 }
 ```
 
-### Endpoints Utilizados
+### Endpoint Utilizado
 
 - `GET /api/sensor/data/latest` - Obtém os últimos dados de cada sensor
 
@@ -105,9 +100,12 @@ O frontend espera dados no seguinte formato da API:
 
 ## 🎨 Personalização
 
-### Adicionar Novo Tipo de Sensor
+Para adicionar um novo tipo de sensor, edite o arquivo `src/components/SensorCard.jsx` nos métodos:
+- `getIconByType`
+- `getColorByType`
+- `formatValue`
 
-Edite o arquivo `src/components/SensorCard.jsx`:
+Exemplo:
 
 ```javascript
 const getIconByType = (type) => {
@@ -155,7 +153,7 @@ npm run build
 
 Os arquivos estáticos estarão em `dist/`
 
-### Deploy em plataformas populares
+### Plataformas Sugeridas
 
 - **Vercel**: Conecte o repositório e faça deploy automático
 - **Netlify**: Faça upload da pasta `dist/`
@@ -171,7 +169,7 @@ Os arquivos estáticos estarão em `dist/`
 ## 🐛 Troubleshooting
 
 ### CORS Error
-Se receber erro de CORS, certifique-se de que o backend está configurado para aceitar requisições de `http://localhost:3000`
+- Se receber erro de CORS, certifique-se de que o backend está configurado para aceitar requisições de `http://localhost:3000`
 
 ### Sem dados disponíveis
 - Verifique se o backend está rodando
@@ -179,5 +177,5 @@ Se receber erro de CORS, certifique-se de que o backend está configurado para a
 - Verifique o console do navegador (F12) para erros
 
 ### Backend respondendo lentamente
-O dashboard atualiza a cada 5 segundos. Se quiser aumentar o intervalo, modifique em Dashboard.jsx
+- O dashboard atualiza a cada 5 segundos. Se quiser aumentar o intervalo, modifique em `Dashboard.jsx`
 ---
